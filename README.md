@@ -1,5 +1,5 @@
 # knowledge graph insights
-
+# work in progress
 ## Included components
 
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
