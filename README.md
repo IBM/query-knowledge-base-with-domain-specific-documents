@@ -9,14 +9,13 @@ This Composite Code Pattern discusses an algorithm developed to resolve the chal
 
 ![](doc/source/images/architurekgnew.png)
 
-When the reader has completed this code pattern, they will understand how to:
 
-* Work with Pandas to preprocess, clean and deal with nans.
-* Build Decision Tree Classification Model in Scikit-learn.
-* Decode a built Decision Tree for traversal. 
-* Find optimal possible paths leading to a final decision/ recommendation.
-* Learn the Strategy to get the correct recommendations.
-
+* The unstructured data is brought into a 3-tuple of entity-relationship-entity
+* A knowledge graph is built out of the obtained entities and relationship
+* A question is entered by the user on the UI.
+* The question asked by the user through the UI is sent to the notebook through the Node Red. Node red helps in integrating the UI with notebook. 
+* The question gets queried and a suitable response is sent back.
+* The user receives the answer on the UI. 
 
 
 ## Included components
