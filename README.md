@@ -1,5 +1,24 @@
-# knowledge graph insights
+# Query Knowledge-base with Domain Specific Documents
 # work in progress
+
+There are many challenges involved when documents contain bunch of information stored in the form of tables and even images. One of the biggest challenge involved is to understand how the information is represented in the knowledge base(Graph). It's quite an ambiguous task to pick the entities from that domain, understand their type and determine the relationship between them. The Code pattern (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents] discusses the strategy to deal with this challenge.
+
+ The another major bottleneck in processing and mining information from such documents will be comprehended better with an example. Take a case where you have quite a few documents regarding the history of cancer patient  and you need a specific answer to these particular questions like When was the cancer diagnosed? What were the early symptoms of the cancer? What is the history of the patient’s family ? What are the treatments given to the patient? List of all the things patient is allergic to? Which Oncologist is in charge of that patient? The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack OBAMA as just ‘OBAMA’, how to make the algorithm understand it’s referring to the US president and not any other person. 
+
+This Composite Code Pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the Knowledge-graph constructed in the Code Pattern  (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents] . The POS(Parts of Speech) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For detailed Algorithm, Check the section `Detailed Algorithm` of the Documentation
+
+![](doc/source/images/architurekgnew.png)
+
+When the reader has completed this code pattern, they will understand how to:
+
+* Work with Pandas to preprocess, clean and deal with nans.
+* Build Decision Tree Classification Model in Scikit-learn.
+* Decode a built Decision Tree for traversal. 
+* Find optimal possible paths leading to a final decision/ recommendation.
+* Learn the Strategy to get the correct recommendations.
+
+
+
 ## Included components
 
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
@@ -26,6 +45,7 @@ described in detail below.
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
 1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
+1. [Detailed Algortihm](#6-detailed-algorithm)
 
 ## 1. Sign up for Watson Studio
 
@@ -74,3 +94,27 @@ Update the websocket URL with the base URL that was noted in the [Section 4](#4-
 ![](doc/source/images/update_html_websocket_url.png)
 
 Click on `Done` and re-deploy the flow.
+
+## 6. Detailed Algorithm.
+
+Problem Statement: Given an unstructured document, the system must be able to answer questions based on this document.  This code pattern solves this problem using the following methodology:
+
+1. Data Conversion: The given unstructured data maybe of the form of free floating text or in the form of a table. The algorithm extract raw text from the doc file and converts table contents to HTML and further a json, to extract information. Python mammoth was the library used to perform all the data conversions.
+
+2. Building a Knowledge Graph: After all the information has been processed and extracted we require to identify the important entities and their relations. This is required so as to represent the obtained the information as a graph. The Entities and Relations are extracted using Watson NLU api along with augmented rules provided by the user This graph will represent the important entities as nodes and the relationship between these nodes as relation edges. It is also known as a knowledge graph.
+
+3. Extraction of Entities and Relationships: The problem is now reduced to the system being able to answer questions by querying the knowledge graph built in the previous step. When the user poses a question the questions is first represented in the form of POS tags. Using chunking we extract the nouns as entities and the verbs as relations.
+
+4. Querying Knowledge Graph for Answers: The obtained knowledge graph is made a table of triplets- (node1, node2, relations). Using fuzzy logic techniques the entities and relations obtained from the question is searched for in the knowledge graph table. Thus, if a question is contains either one of the nodes and the relation, the answer to the question is bound to the other node. This way we can answer questions from any given document.
+
+
+# Troubleshooting
+
+[See DEBUGGING.md.](DEBUGGING.md)
+
+# License
+
+[Apache 2.0](LICENSE)
+
+
+
