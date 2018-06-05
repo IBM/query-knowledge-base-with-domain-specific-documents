@@ -44,7 +44,7 @@ described in detail below.
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
 1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
-1. [Accessing the user interface](#6-access-the-user-interface)
+1. [Accessing the user interface](#6-accessing-the-user-interface)
 1. [Detailed Algortihm](#6-detailed-algorithm)
 
 ## 1. Sign up for Watson Studio
