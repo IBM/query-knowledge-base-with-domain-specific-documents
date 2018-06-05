@@ -44,6 +44,7 @@ described in detail below.
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
 1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
+1. [Accessing the user interface](#6-access-the-user-interface)
 1. [Detailed Algortihm](#6-detailed-algorithm)
 
 ## 1. Sign up for Watson Studio
@@ -58,8 +59,8 @@ Create the IBM Cloud services required for the individual code patterns:
   * [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow#2-create-ibm-cloud-services)
 
 ## 3. Import the Node-RED flow
-* [Clone this repo](https://github.ibm.com/rravipal/pattern2).
-* Navigate to the [orchestrate_dsx_workflow.json](https://github.ibm.com/rravipal/pattern2/node-red-flow/knowledge_graph_insights.json).
+* [Clone this repo](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents).
+* Navigate to the [orchestrate_dsx_workflow.json](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents/node-red-flow/knowledge_graph_insights.json).
 * Open the file with a text editor and copy the contents to Clipboard.
 * On the Node-RED flow editor, click the Menu and select `Import` -> `Clipboard` and paste the contents.
 
@@ -94,7 +95,16 @@ Update the websocket URL with the base URL that was noted in the [Section 4](#4-
 
 Click on `Done` and re-deploy the flow.
 
-## 6. Detailed Algorithm.
+## 6. Accessing the user interface
+Open a new tab and enter the following url with your NODERED_BASE_URL:
+
+	http://NODERED_BASE_URL/dsxinsights
+	
+![](doc/source/images/ui.png)
+
+Now you are ready to search in the search text area.
+
+## 7. Detailed Algorithm.
 
 Problem Statement: Given an unstructured document, the system must be able to answer questions based on this document.  This code pattern solves this problem using the following methodology:
 
