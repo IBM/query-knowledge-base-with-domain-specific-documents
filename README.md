@@ -116,7 +116,7 @@ Update your NODERED BASE URL in the notebook, as shown below.
 
 Add your NODERED BASE URL as shown below : 	
 
-	"ws://" + NODERED_BASE_URL + "/ws/abc";
+	"ws://" + NODERED_BASE_URL + "/ws/abc"
 
 ## 7. Accessing the user interface
 Open a new tab and enter the following url with your NODERED_BASE_URL:
