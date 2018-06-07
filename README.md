@@ -52,8 +52,9 @@ described in detail below.
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
 1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
-1. [Accessing the user interface](#6-accessing-the-user-interface)
-1. [Detailed Algortihm](#7-detailed-algorithm)
+1. [Update the websocket URL in Notebook](#6-update-the-websocket-url-in-notebook)
+1. [Accessing the user interface](#7-accessing-the-user-interface)
+1. [Detailed Algortihm](#8-detailed-algorithm)
 
 ## 1. Sign up for Watson Studio
 
@@ -90,6 +91,10 @@ An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.myb
 
 The NODERED_BASE_URL may have additional region information i.e. `eu-gb` for the UK region. In this case `NODERED_BASE_URL` would be: `myApp.eu-gb.mybluemix.net`. 
 
+In this Code pattern, we address the problem of extracting knowledge out of text and tables in word documents. A knowledge graph is built from the knowledge extracted making the knowledge queryable.
+
+This pattern demonstrates a methodology to derive insights with IBM Cloud, Watson services, Python NLTK and IBM Data Science experience.
+
 ## 5. Update the websocket URL in HTML code
 Click on the node named `HTML`.
 ![](doc/source/images/html_node.png)
@@ -103,7 +108,15 @@ Update the websocket URL with the base URL that was noted in the [Section 4](#4-
 
 Click on `Done` and re-deploy the flow.
 
-## 6. Accessing the user interface
+## 6. Update the websocket URL in notebook
+
+![](doc/source/images/websocket_notebook.png)
+
+Add your NODERED BASE URL in the websocket URL as shown below : 	
+
+	var websocketURL = "ws://" + NODERED_BASE_URL + "/ws/abc";
+
+## 7. Accessing the user interface
 Open a new tab and enter the following url with your NODERED_BASE_URL:
 
 	http://NODERED_BASE_URL/dsxinsights
@@ -112,7 +125,7 @@ Open a new tab and enter the following url with your NODERED_BASE_URL:
 
 Now you are ready to search in the search text area.
 
-## 7. Detailed Algorithm.
+## 8. Detailed Algorithm.
 
 Problem Statement: Given an unstructured document, the system must be able to answer questions based on this document.  This code pattern solves this problem using the following methodology:
 
