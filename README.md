@@ -15,7 +15,7 @@ The problem lies in finding the context of the entities in the text string used 
 
 This Composite code pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the knowledge graph constructed in the code pattern (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents]. The POS(Parts of Speech) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For details on the algorithm, check the section `Detailed Algorithm` of the Documentation.
 
-![](doc/source/images/architurekgnew.png)
+![](doc/source/images/architecture.png)
 
 
 * The unstructured data is brought into a 3-tuple of entity-relationship-entity
