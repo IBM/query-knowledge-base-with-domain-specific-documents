@@ -1,9 +1,10 @@
 # Query Knowledge-base with Domain Specific Documents
 # work in progress
 
-This code pattern is in continuation of the composite pattern - (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents]. We saw how we can extract entities and relations from a word document that contains information in tables and text to build a knowledge graph.
+This code pattern is in continuation of the composite pattern - [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents). We saw how we can extract entities and relations from a word document that contains information in tables and text to build a knowledge graph.
 
 After building the knowledge graph, the next step is fetch the required facts. Take the example of a document that contains details of the history of a cancer patient. We could the need the answer to the below questions and more:
+
 * When was the cancer diagnosed? 
 * What were the early symptoms of the cancer? 
 * What is the history of the patient’s family? 
@@ -11,12 +12,11 @@ After building the knowledge graph, the next step is fetch the required facts. T
 * List of all the things patient is allergic to? 
 * Which Oncologist is in charge of that patient? 
 
-The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack OBAMA as just ‘OBAMA’, how to make the algorithm understand it’s referring to the US president and not any other person. 
+The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack Obama as just "OBAMA", how to make the algorithm understand it’s referring to the US president and not any other person. 
 
-This Composite code pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the knowledge graph constructed in the code pattern (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents]. The POS(Parts of Speech) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For details on the algorithm, check the section `Detailed Algorithm` of the Documentation.
+This Composite code pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the knowledge graph constructed in the code pattern [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents). The Parts of Speech (PoS) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For details on the algorithm, check the section `Detailed Algorithm` of the documentation.
 
 ![](doc/source/images/architecture.png)
-
 
 * The unstructured data is brought into a 3-tuple of entity-relationship-entity
 * A knowledge graph is built out of the obtained entities and relationship
@@ -24,7 +24,6 @@ This Composite code pattern discusses an algorithm developed to resolve the chal
 * The question asked by the user through the UI is sent to the notebook through the Node Red. Node red helps in integrating the UI with notebook. 
 * The question gets queried and a suitable response is sent back.
 * The user receives the answer on the UI. 
-
 
 ## Included components
 
@@ -74,8 +73,6 @@ Create the IBM Cloud services required for the individual code patterns:
 * On the Node-RED flow editor, click the Menu and select `Import` -> `Clipboard` and paste the contents.
 
  ![](doc/source/images/import_nodered_flow.png)
- <br/>
- <br/>
  
  #### Deploy the Node-RED flow by clicking on the `Deploy` button
 
@@ -139,7 +136,6 @@ Problem Statement: Given an unstructured document, the system must be able to a
 
 4. Querying Knowledge Graph for Answers: The obtained knowledge graph is made a table of triplets- (node1, node2, relations). Using fuzzy logic techniques the entities and relations obtained from the question is searched for in the knowledge graph table. Thus, if a question is contains either one of the nodes and the relation, the answer to the question is bound to the other node. This way we can answer questions from any given document.
 
-
 # Troubleshooting
 
 [See DEBUGGING.md.](DEBUGGING.md)
@@ -147,6 +143,3 @@ Problem Statement: Given an unstructured document, the system must be able to a
 # License
 
 [Apache 2.0](LICENSE)
-
-
-
