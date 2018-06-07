@@ -1,11 +1,19 @@
 # Query Knowledge-base with Domain Specific Documents
 # work in progress
 
-There are many challenges involved when documents contain bunch of information stored in the form of tables and even images. One of the biggest challenge involved is to understand how the information is represented in the knowledge base(Graph). It's quite an ambiguous task to pick the entities from that domain, understand their type and determine the relationship between them. The Code pattern (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents] discusses the strategy to deal with this challenge.
+This code pattern is in continuation of the composite pattern - (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents]. We saw how we can extract entities and relations from a word document that contains information in tables and text to build a knowledge graph.
 
- The another major bottleneck in processing and mining information from such documents will be comprehended better with an example. Take a case where you have quite a few documents regarding the history of cancer patient  and you need a specific answer to these particular questions like When was the cancer diagnosed? What were the early symptoms of the cancer? What is the history of the patient’s family ? What are the treatments given to the patient? List of all the things patient is allergic to? Which Oncologist is in charge of that patient? The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack OBAMA as just ‘OBAMA’, how to make the algorithm understand it’s referring to the US president and not any other person. 
+After building the knowledge graph, the next step is fetch the required facts. Take the example of a document that contains details of the history of a cancer patient. We could the need the answer to the below questions and more:
+* When was the cancer diagnosed? 
+* What were the early symptoms of the cancer? 
+* What is the history of the patient’s family? 
+* What are the treatments given to the patient? 
+* List of all the things patient is allergic to? 
+* Which Oncologist is in charge of that patient? 
 
-This Composite Code Pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the Knowledge-graph constructed in the Code Pattern  (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents] . The POS(Parts of Speech) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For detailed Algorithm, Check the section `Detailed Algorithm` of the Documentation
+The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack OBAMA as just ‘OBAMA’, how to make the algorithm understand it’s referring to the US president and not any other person. 
+
+This Composite code pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the knowledge graph constructed in the code pattern (`build knowledge-base with domain-specific documents`)[https://github.com/IBM/build-knowledge-base-with-domain-specific-documents]. The POS(Parts of Speech) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For details on the algorithm, check the section `Detailed Algorithm` of the Documentation.
 
 ![](doc/source/images/architurekgnew.png)
 
