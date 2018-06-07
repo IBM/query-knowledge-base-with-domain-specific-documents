@@ -110,7 +110,8 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Update the websocket URL in notebook
 
-Replce the highlighted region with your NODERED BASE URL in the notebook, as shown below.
+Update your NODERED BASE URL in the notebook, as shown below.
+
 ![](doc/source/images/websocket_notebook.png)
 
 Add your NODERED BASE URL as shown below : 	
