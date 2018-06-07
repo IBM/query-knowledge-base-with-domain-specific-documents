@@ -110,11 +110,12 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Update the websocket URL in notebook
 
+Replce the highlighted region with your NODERED BASE URL in the notebook, as shown below.
 ![](doc/source/images/websocket_notebook.png)
 
-Add your NODERED BASE URL in the websocket URL as shown below : 	
+Add your NODERED BASE URL as shown below : 	
 
-	var websocketURL = "ws://" + NODERED_BASE_URL + "/ws/abc";
+	"ws://" + NODERED_BASE_URL + "/ws/abc";
 
 ## 7. Accessing the user interface
 Open a new tab and enter the following url with your NODERED_BASE_URL:
