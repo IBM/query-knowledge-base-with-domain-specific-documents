@@ -12,7 +12,7 @@ After building the knowledge graph, the next step is fetch the required facts. T
 * List of all the things patient is allergic to? 
 * Which Oncologist is in charge of that patient? 
 
-The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack Obama as just "OBAMA", how to make the algorithm understand it’s referring to the US president and not any other person. 
+The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack Obama as just 'OBAMA', how to make the algorithm understand it’s referring to the US president and not any other person. 
 
 This Composite code pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the knowledge graph constructed in the code pattern [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents). The Parts of Speech (PoS) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For details on the algorithm, check the section `Detailed Algorithm` of the documentation.
 
