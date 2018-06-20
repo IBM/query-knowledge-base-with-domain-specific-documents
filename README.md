@@ -1,5 +1,4 @@
 # Query Knowledge-base with Domain Specific Documents
-# work in progress
 
 This code pattern is in continuation of the composite pattern - [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents). We saw how we can extract entities and relations from a word document that contains information in tables and text to build a knowledge graph.
 
@@ -39,7 +38,7 @@ This Composite code pattern discusses an algorithm developed to resolve the chal
 
 * [Data Science](https://medium.com/ibm-data-science-experience/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
 
-# Watch the Video
+<!-- # Watch the Video -->
 
 # Steps
 
@@ -124,7 +123,7 @@ Open a new tab and enter the following url with your NODERED_BASE_URL:
 
 Now you are ready to search in the search text area.
 
-## 8. Detailed Algorithm.
+# Detailed Algorithm
 
 Problem Statement: Given an unstructured document, the system must be able to answer questions based on this document.  This code pattern solves this problem using the following methodology:
 
