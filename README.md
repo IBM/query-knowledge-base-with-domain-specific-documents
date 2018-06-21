@@ -125,7 +125,7 @@ Open a new tab and enter the following url with your NODERED_BASE_URL:
 Now you are ready to search in the search text area.
 
 # Set up the Notebook 
-Follow the instructions given in the [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents) to set-up the Notebook on IBM Data Science Experience. The only change is use this updated[ Notebook](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents/blob/master/notebook/Knowledge_graph_insights.ipynb)
+Follow the instructions given in the [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents) to set-up the Notebook on IBM Data Science Experience. The only change is use this updated[ Notebook](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents/blob/master/notebook/Knowledge_graph_insights.ipynb).
 
 # Detailed Algorithm
 
