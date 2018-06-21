@@ -52,7 +52,8 @@ described in detail below.
 1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
 1. [Update the websocket URL in Notebook](#6-update-the-websocket-url-in-notebook)
 1. [Accessing the user interface](#7-accessing-the-user-interface)
-1. [Detailed Algortihm](#8-detailed-algorithm)
+1. [Set up the Notebook](#8-Set-up-the-Notebook)
+1. [Detailed Algortihm](#9-detailed-algorithm)
 
 ## 1. Sign up for Watson Studio
 
@@ -122,6 +123,9 @@ Open a new tab and enter the following url with your NODERED_BASE_URL:
 ![](doc/source/images/ui.png)
 
 Now you are ready to search in the search text area.
+
+# Set up the Notebook 
+Follow the instructions given in the [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents) to set-up the Notebook on IBM Data Science Experience. The only change is use this updated[ Notebook](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents/blob/master/notebook/Knowledge_graph_insights.ipynb)
 
 # Detailed Algorithm
 
