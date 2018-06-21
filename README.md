@@ -52,8 +52,8 @@ described in detail below.
 1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
 1. [Update the websocket URL in Notebook](#6-update-the-websocket-url-in-notebook)
 1. [Accessing the user interface](#7-accessing-the-user-interface)
-1. [Set up the Notebook](#8-set-up-the-notebook)
-1. [Detailed Algortihm](#9-detailed-algorithm)
+1. [Set up the Notebook](#set-up-the-notebook)
+1. [Detailed Algortihm](#detailed-algorithm)
 
 ## 1. Sign up for Watson Studio
 
