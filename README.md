@@ -72,7 +72,7 @@ Create the IBM Cloud services required for the individual code patterns:
 
 ## 3. Import the Node-RED flow
 * [Clone this repo](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents).
-* Navigate to the [orchestrate_dsx_workflow.json](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents/node-red-flow/knowledge_graph_insights.json).
+* Navigate to the [knowledge_graph_insights.json](https://github.com/IBM/query-knowledge-base-with-domain-specific-documents/tree/master/node-red-flow/knowledge_graph_insights.json).
 * Open the file with a text editor and copy the contents to Clipboard.
 * On the Node-RED flow editor, click the Menu and select `Import` -> `Clipboard` and paste the contents.
 
