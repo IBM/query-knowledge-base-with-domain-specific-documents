@@ -137,7 +137,7 @@ Problem Statement: Given an unstructured document, the system must be able to a
 
 1. Data Conversion: The given unstructured data maybe of the form of free floating text or in the form of a table. The algorithm extract raw text from the doc file and converts table contents to HTML and further a json, to extract information. Python mammoth was the library used to perform all the data conversions.
 
-2. Building a Knowledge Graph: After all the information has been processed and extracted we require to identify the important entities and their relations. This is required so as to represent the obtained the information as a graph. The Entities and Relations are extracted using Watson NLU api along with augmented rules provided by the user This graph will represent the important entities as nodes and the relationship between these nodes as relation edges. It is also known as a knowledge graph.
+2. Building a Knowledge Graph: After all the information has been processed and extracted we require to identify the important entities and their relations. This is required so as to represent the obtained the information as a graph. The Entities and Relations are extracted using Watson NLU api along with augmented rules provided by the user. This graph will represent the important entities as nodes and the relationship between these nodes as relation edges. It is also known as a knowledge graph.
 
 3. Extraction of Entities and Relationships: The problem is now reduced to the system being able to answer questions by querying the knowledge graph built in the previous step. When the user poses a question the questions is first represented in the form of POS tags. Using chunking we extract the nouns as entities and the verbs as relations.
 
