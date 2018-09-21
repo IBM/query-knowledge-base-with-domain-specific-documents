@@ -2,7 +2,7 @@
 
 This code pattern is in continuation of the composite pattern - [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents). We saw how we can extract entities and relations from a word document that contains information in tables and text to build a knowledge graph.
 
-After building the knowledge graph, the next step is fetch the required facts. Take the example of a document that contains details of the history of a cancer patient. We could the need the answer to the below questions and more:
+After building the knowledge graph, the next step is fetch the required facts. Take the example of a document that contains details of the history of a cancer patient. We could then need the answer to the below questions and more:
 
 * When was the cancer diagnosed? 
 * What were the early symptoms of the cancer? 
@@ -11,7 +11,7 @@ After building the knowledge graph, the next step is fetch the required facts. T
 * List of all the things patient is allergic to? 
 * Which Oncologist is in charge of that patient? 
 
-The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a new york times article there is a mention of former US President Barack Obama as just 'OBAMA', how to make the algorithm understand it’s referring to the US president and not any other person. 
+The problem lies in finding the context of the entities in the text string used for search, resolve the ambiguity of the text, formulating the query accordingly and provide the relevant query results fetched from the domain-specific Knowledge base. For instance, In a New York Times article there is a mention of former US President Barack Obama as just 'OBAMA', how to make the algorithm understand it’s referring to the US president and not any other person. 
 
 This Composite code pattern discusses an algorithm developed to resolve the challenges stated above. The algorithm uses the knowledge graph constructed in the code pattern [`build knowledge-base with domain-specific documents`](https://github.com/IBM/build-knowledge-base-with-domain-specific-documents). The Parts of Speech (PoS) Tagging is done on search text and fuzzy wuzzy string matching library was used to get the relevant answers. For details on the algorithm, check the section `Detailed Algorithm` of the documentation.
 
@@ -115,7 +115,7 @@ Update your NODERED BASE URL in the notebook, as shown below.
 
 ![](doc/source/images/websocket_notebook.png)
 
-Add your NODERED BASE URL as shown below : 	
+Add your NODERED BASE URL as shown below: 	
 
 	"ws://" + NODERED_BASE_URL + "/ws/abc"
 
@@ -137,7 +137,7 @@ Problem Statement: Given an unstructured document, the system must be able to a
 
 1. Data Conversion: The given unstructured data maybe of the form of free floating text or in the form of a table. The algorithm extract raw text from the doc file and converts table contents to HTML and further a json, to extract information. Python mammoth was the library used to perform all the data conversions.
 
-2. Building a Knowledge Graph: After all the information has been processed and extracted we require to identify the important entities and their relations. This is required so as to represent the obtained the information as a graph. The Entities and Relations are extracted using Watson NLU api along with augmented rules provided by the user. This graph will represent the important entities as nodes and the relationship between these nodes as relation edges. It is also known as a knowledge graph.
+2. Building a Knowledge Graph: After all the information has been processed and extracted we require to identify the important entities and their relations. This is required so as to represent the obtained the information as a graph. The Entities and Relations are extracted using Watson NLU API along with augmented rules provided by the user. This graph will represent the important entities as nodes and the relationship between these nodes as relation edges. It is also known as a knowledge graph.
 
 3. Extraction of Entities and Relationships: The problem is now reduced to the system being able to answer questions by querying the knowledge graph built in the previous step. When the user poses a question the questions is first represented in the form of POS tags. Using chunking we extract the nouns as entities and the verbs as relations.
 
